@@ -108,35 +108,17 @@
         <h3>BROWSE BY COUNTRY</h3>
       </div>
       <ul class="links">
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Australia <i class="fa fa-angle-double-right"></i></a></li>
+      <?php foreach($countries as $country): ?>
+        <li><a href="#_"><?=$country->country?> <i class="fa fa-angle-double-right"></i></a></li>
+      <?php endforeach; ?>
       </ul>
       <div class="tital">
-        <h3>BBROWSE BY COLOR</h3>
+        <h3>BROWSE BY COLOR</h3>
       </div>
       <ul class="links">
-        <li><a href="#_">Blue <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Red <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Green <i class="fa fa-angle-double-right"></i></a></li>
-        <li><a href="#_">Yellow <i class="fa fa-angle-double-right"></i></a></li>
+      <?php foreach($colors as $color): ?>
+        <li><a href="#_"><?=$color->color?> <i class="fa fa-angle-double-right"></i></a></li>
+      <?php endforeach; ?>
       </ul>
     
     </div>
