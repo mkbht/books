@@ -28,7 +28,7 @@ class Main extends CI_Controller {
     {
         $data['featured_category'] = $this->db->limit(30)->select('category')->distinct('category')->get('sample')->result();
         $data['featured_list'] = $this->db->order_by('rand()')->limit(6)->select('category')->distinct('category')->get('sample')->result();
-        $data['countries'] = $this->main->getCountryList();
+        $data['countries'] = $this->main->getCountriesList();
         $data['colors'] = $this->main->getColorList();
         //paginate
         $this->config->load('pagination');
