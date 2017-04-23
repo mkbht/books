@@ -23,7 +23,7 @@
                 </div>
                 <ul class="footerList">
                 <?php foreach($featured_list as $value): ?>
-                    <li><a href="<?=base_url('#'); ?>"><?=$value->category?></a>
+                    <li><a href="<?=base_url('main/category/'.$value); ?>"><?=$value->category?></a>
                 <?php endforeach; ?>
                 </ul>
             </div>
