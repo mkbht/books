@@ -12,8 +12,34 @@ class Main_model extends CI_Model {
 		return $this->db->get('sample')->result();
 	}
 
-	function getCategoryList($value='') {
+	function getCategoryList($value, $limit, $offset) {
+		$query = $this->db->where('category', str_replace('-', ' ', $value))->order_by('name')->limit($limit, $offset)->get('sample');
+		return $query->result();
+	}
+
+	function getCountryList($value, $limit, $offset) {
+		$query = $this->db->where('country', str_replace('-', ' ', $value))->order_by('name')->limit($limit, $offset)->get('sample');
+		return $query->result();
+	}
+
+
+	function countCategoryList($value) {
 		$query = $this->db->where('category', str_replace('-', ' ', $value))->get('sample');
+		return $query->num_rows();
+	}
+
+	function countCountryList($value) {
+		$query = $this->db->where('country', str_replace('-', ' ', $value))->get('sample');
+		return $query->num_rows();
+	}
+
+	function getCountriesList() {
+		$query = $this->db->select('country')->distinct('country')->get('sample');
+		return $query->result();
+	}
+
+	function getColorList() {
+		$query = $this->db->select('color')->distinct('color')->get('sample');
 		return $query->result();
 	}
 
