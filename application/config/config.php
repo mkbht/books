@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://139.59.60.17/books/index.php/';
+$config['base_url'] = 'http://139.59.60.17/books/';
 
 /*
 |--------------------------------------------------------------------------
